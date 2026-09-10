@@ -1,15 +1,15 @@
-const form = document.getElementById("marksForm");
-const resultText = document.getElementById("resultText");
+function calculateResult() {
+  
+  let english = Number(document.getElementById("english").value);
+  let nepali = Number(document.getElementById("nepali").value);
+  let math = Number(document.getElementById("math").value);
+  let science = Number(document.getElementById("science").value);
+  let social = Number(document.getElementById("social").value);
+  let health = Number(document.getElementById("health").value);
+  let computer = Number(document.getElementById("computer").value);
+  let account = Number(document.getElementById("account").value);
 
-form.addEventListener("submit", function(event) {
-  event.preventDefault();
-
-  const inputs = document.querySelectorAll(".mark-input");
-  let totalMarks = 0;
-
-  for (let i = 0; i < inputs.length; i++) {
-    totalMarks = totalMarks + Number(inputs[i].value);
-  }
+  let totalMarks = english + nepali + math + science + social + health + computer + account;
 
   let division = "";
   let color = "";
@@ -31,6 +31,6 @@ form.addEventListener("submit", function(event) {
     color = "red";
   }
 
-  resultText.style.color = "black";
+  let resultText = document.getElementById("resultText");
   resultText.innerHTML = "Total Marks: " + totalMarks + "/800 | Result: <span style='color:" + color + ";'>" + division + "</span>";
-});
+}
