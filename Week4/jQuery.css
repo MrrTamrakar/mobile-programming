@@ -1,0 +1,140 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: lightgray;
+}
+
+#skills-list {
+    width: 100px;
+    margin: 10px auto;
+    text-align: left;
+}
+
+#skills-list li {
+    margin: 5px 0;
+}
+
+/* OUTPUT*/
+
+.output-box {
+    width: 400px;
+    margin: 25px auto;
+    padding: 15px;
+
+    background-color: #eaf4ff;
+
+    border: 2px solid #3498db;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px gray;
+}
+
+.output-box h2 {
+    color: #2980b9;
+}
+
+#output {
+    padding: 12px;
+
+    background-color: white;
+
+    border-radius: 5px;
+
+    min-height: 20px;
+
+    color: #333;
+}
+
+
+/* PROFILE CARD */
+
+#profile-card {
+    width: 350px;
+
+    margin: 30px auto;
+
+    padding: 20px;
+
+    background-color: white;
+
+    border: 1px solid black;
+
+    box-shadow: 0 5px 10px gray;
+}
+
+
+/* Profile photo */
+
+#profile-photo {
+    margin: 10px;
+}
+
+
+/* Input */
+
+input {
+    padding: 8px;
+
+    margin: 10px;
+
+    width: 200px;
+}
+
+
+/* Buttons */
+
+button {
+    margin: 5px;
+
+    padding: 8px 12px;
+
+    cursor: pointer;
+}
+
+
+/* CSS CLASSES*/
+
+.highlighted {
+    border: 5px solid yellow !important;
+}
+
+.dark-mode {
+    background-color: #333 !important;
+
+    color: white;
+}
+
+.rounded {
+    border-radius: 50%;
+
+    border: 5px solid blue;
+}
+
+.shadow {
+    box-shadow: 0 0 15px black;
+}
+
+
+/* BUTTON AREA */
+
+#buttons {
+    width: 700px;
+
+    max-width: 90%;
+
+    margin: 30px auto;
+
+    padding: 20px;
+
+    background-color: white;
+
+    border: 1px solid gray;
+
+    box-shadow: 0 4px 10px gray;
+}
+
+#buttons h3 {
+    color: #2980b9;
+
+    margin-top: 20px;
+}
