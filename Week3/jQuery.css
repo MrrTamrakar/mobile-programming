@@ -14,8 +14,6 @@ body {
     margin: 5px 0;
 }
 
-/* OUTPUT*/
-
 .output-box {
     width: 400px;
     margin: 25px auto;
@@ -45,9 +43,6 @@ body {
     color: #333;
 }
 
-
-/* PROFILE CARD */
-
 #profile-card {
     width: 350px;
 
@@ -62,15 +57,9 @@ body {
     box-shadow: 0 5px 10px gray;
 }
 
-
-/* Profile photo */
-
 #profile-photo {
     margin: 10px;
 }
-
-
-/* Input */
 
 input {
     padding: 8px;
@@ -80,9 +69,6 @@ input {
     width: 200px;
 }
 
-
-/* Buttons */
-
 button {
     margin: 5px;
 
@@ -90,9 +76,6 @@ button {
 
     cursor: pointer;
 }
-
-
-/* CSS CLASSES*/
 
 .highlighted {
     border: 5px solid yellow !important;
@@ -113,9 +96,6 @@ button {
 .shadow {
     box-shadow: 0 0 15px black;
 }
-
-
-/* BUTTON AREA */
 
 #buttons {
     width: 700px;

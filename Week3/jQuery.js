@@ -1,12 +1,5 @@
 $(document).ready(function() {
 
-
-    // =========================
-    // GET & SET
-    // =========================
-
-
-    // Show Name
     $("#show-name").click(function() {
 
         var name = $("#student-name").text();
@@ -15,8 +8,6 @@ $(document).ready(function() {
 
     });
 
-
-    // Change Name
     $("#change-name").click(function() {
 
     var name = $("#nickname-input").val();
@@ -27,8 +18,6 @@ $(document).ready(function() {
 
 });
 
-
-    // Show Bio
     $("#show-bio").click(function() {
 
         var bio = $("#student-bio").html();
@@ -37,8 +26,6 @@ $(document).ready(function() {
 
     });
 
-
-    // Get Input
     $("#get-input").click(function() {
 
         var nickname = $("#nickname-input").val();
@@ -47,8 +34,6 @@ $(document).ready(function() {
 
     });
 
-
-    // Set Input
     $("#set-input").click(function() {
 
         $("#nickname-input").val("jQuery Pro");
@@ -57,14 +42,6 @@ $(document).ready(function() {
 
     });
 
-
-
-    // =========================
-    // CSS CLASSES
-    // =========================
-
-
-    // Add Highlight
     $("#highlight-card").click(function() {
 
         $("#profile-card").addClass("highlighted");
@@ -73,8 +50,6 @@ $(document).ready(function() {
 
     });
 
-
-    // Remove Highlight
     $("#remove-highlight").click(function() {
 
         $("#profile-card").removeClass("highlighted");
@@ -83,8 +58,6 @@ $(document).ready(function() {
 
     });
 
-
-    // Toggle Dark Mode
     $("#dark-mode").click(function() {
 
         $("#profile-card").toggleClass("dark-mode");
@@ -93,8 +66,6 @@ $(document).ready(function() {
 
     });
 
-
-    // Toggle Rounded
     $("#rounded").click(function() {
 
         $("#profile-photo").toggleClass("rounded");
@@ -103,14 +74,6 @@ $(document).ready(function() {
 
     });
 
-
-
-    // =========================
-    // CSS METHOD
-    // =========================
-
-
-    // Red Background
     $("#red-background").click(function() {
 
         $("#profile-card").css(
@@ -122,8 +85,6 @@ $(document).ready(function() {
 
     });
 
-
-    // Reset Background
     $("#reset-background").click(function() {
 
         $("#profile-card").css(
@@ -135,14 +96,6 @@ $(document).ready(function() {
 
     });
 
-
-
-    // =========================
-    // HIDE & SHOW
-    // =========================
-
-
-    // Hide Photo
     $("#hide-photo").click(function() {
 
         $("#profile-photo").hide("slow");
@@ -151,8 +104,6 @@ $(document).ready(function() {
 
     });
 
-
-    // Show Photo
     $("#show-photo").click(function() {
 
         $("#profile-photo").show("slow");
@@ -161,8 +112,6 @@ $(document).ready(function() {
 
     });
 
-
-    // Toggle Bio
     $("#toggle-bio").click(function() {
 
         $("#student-bio").toggle();
@@ -171,14 +120,6 @@ $(document).ready(function() {
 
     });
 
-
-
-    // =========================
-    // FADE
-    // =========================
-
-
-    // Fade Out
     $("#fade-out").click(function() {
 
         $("#profile-card").fadeOut();
@@ -188,7 +129,6 @@ $(document).ready(function() {
     });
 
 
-    // Fade In
     $("#fade-in").click(function() {
 
         $("#profile-card").fadeIn();
@@ -197,8 +137,6 @@ $(document).ready(function() {
 
     });
 
-
-    // Fade to 50%
     $("#fade-50").click(function() {
 
         $("#profile-card").fadeTo(
@@ -210,14 +148,6 @@ $(document).ready(function() {
 
     });
 
-
-
-    // =========================
-    // SLIDE
-    // =========================
-
-
-    // Slide Up
     $("#slide-up").click(function() {
 
         $("#skills-list").slideUp();
@@ -226,8 +156,6 @@ $(document).ready(function() {
 
     });
 
-
-    // Slide Down
     $("#slide-down").click(function() {
 
         $("#skills-list").slideDown();
@@ -236,8 +164,6 @@ $(document).ready(function() {
 
     });
 
-
-    // Slide Toggle
     $("#slide-toggle").click(function() {
 
         $("#skills-list").slideToggle();
@@ -245,13 +171,6 @@ $(document).ready(function() {
         $("#output").text("Skills toggled!");
 
     });
-
-
-
-    // =========================
-    // ANIMATE
-    // =========================
-
 
     $("#animate-card").click(function() {
 
@@ -267,14 +186,6 @@ $(document).ready(function() {
 
     });
 
-
-
-    // =========================
-    // EVENTS
-    // =========================
-
-
-    // Mouse enters photo
     $("#profile-photo").mouseenter(function() {
 
         $("#profile-photo").addClass("shadow");
@@ -283,8 +194,6 @@ $(document).ready(function() {
 
     });
 
-
-    // Mouse leaves photo
     $("#profile-photo").mouseleave(function() {
 
         $("#profile-photo").removeClass("shadow");
@@ -293,14 +202,10 @@ $(document).ready(function() {
 
     });
 
-
-    // Key pressed
     $("#nickname-input").keydown(function(event) {
 
         $("#output").text(
             "You pressed: " + event.key
         );
-
     });
-
 });
