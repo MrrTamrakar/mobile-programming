@@ -1,13 +1,14 @@
+import { useRouter } from "expo-router";
 import { useState } from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 import {
-  View,
-  Text,
-  TextInput,
   Pressable,
   ScrollView,
   StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const APP_NAME = "Kalakar";
 
@@ -47,11 +48,12 @@ const TABS = [
 ];
 
 export default function HomeScreen() {
+  const router = useRouter();
   const [activeTab, setActiveTab] = useState("home");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchText, setSearchText] = useState("");
-  const [hiredIds, setHiredIds] = useState([]);
-  const [enrolledIds, setEnrolledIds] = useState([]);
+  const [hiredIds, setHiredIds] = useState<string[]>([]);
+const [enrolledIds, setEnrolledIds] = useState<string[]>([]);
   const [caption, setCaption] = useState("");
   const [posted, setPosted] = useState(false);
 
@@ -66,7 +68,7 @@ export default function HomeScreen() {
     return selectedCategory === "All" || item.niche === selectedCategory;
   });
 
-  function toggleHire(id) {
+  function toggleHire(id: string) {
     if (hiredIds.includes(id)) {
       setHiredIds(hiredIds.filter((hiredId) => hiredId !== id));
     } else {
@@ -74,7 +76,7 @@ export default function HomeScreen() {
     }
   }
 
-  function toggleEnroll(id) {
+  function toggleEnroll(id: string) {
     if (enrolledIds.includes(id)) {
       setEnrolledIds(enrolledIds.filter((enrolledId) => enrolledId !== id));
     } else {
@@ -91,21 +93,26 @@ export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.screen}>
       {/* Top bar */}
-      <View style={styles.topBar}>
-        <View style={styles.topBarRow}>
-          <Text style={styles.appName}>{APP_NAME}</Text>
-          <View style={styles.avatar}>
-            <Text style={styles.avatarText}>D</Text>
-          </View>
-        </View>
-        <TextInput
-          style={styles.searchInput}
-          value={searchText}
-          onChangeText={setSearchText}
-          placeholder="Search designers..."
-          placeholderTextColor="#94a3b8"
-        />
+<View style={styles.topBar}>
+  <View style={styles.topBarRow}>
+    <Text style={styles.appName}>{APP_NAME}</Text>
+    <View style={styles.topBarRight}>
+      <Pressable style={styles.signUpPill} onPress={() => router.push("/signup")}>
+        <Text style={styles.signUpPillText}>Sign Up</Text>
+      </Pressable>
+      <View style={styles.avatar}>
+        <Text style={styles.avatarText}>D</Text>
       </View>
+    </View>
+  </View>
+  <TextInput
+    style={styles.searchInput}
+    value={searchText}
+    onChangeText={setSearchText}
+    placeholder="Search designers..."
+    placeholderTextColor="#94a3b8"
+  />
+</View>
 
       {/* Home tab */}
       {activeTab === "home" && (
@@ -257,7 +264,9 @@ const styles = StyleSheet.create({
   avatar: { width: 30, height: 30, borderRadius: 15, backgroundColor: "#007AFF", alignItems: "center", justifyContent: "center" },
   avatarText: { color: "#ffffff", fontWeight: "700", fontSize: 13 },
   searchInput: { backgroundColor: "#2f343b", borderRadius: 10, paddingVertical: 8, paddingHorizontal: 12, color: "#ffffff", fontSize: 13 },
-
+  topBarRight: { flexDirection: "row", alignItems: "center", gap: 10 },
+  signUpPill: { backgroundColor: "#007AFF", borderRadius: 999, paddingVertical: 6, paddingHorizontal: 14 },
+  signUpPillText: { color: "#ffffff", fontWeight: "700", fontSize: 12 },
   chipRow: { flexDirection: "row", flexWrap: "wrap", gap: 8, paddingHorizontal: 16, marginBottom: 8 },
   chip: { borderWidth: 1, borderColor: "#3a3f45", borderRadius: 20, paddingVertical: 6, paddingHorizontal: 14 },
   chipSelected: { backgroundColor: "#007AFF", borderColor: "#007AFF" },
